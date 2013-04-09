@@ -96,9 +96,9 @@ define('#{cleanPath}', function(require, exports, module) {\n\
         return
 
     def __addFileMapping(self, filePath):
-        # trim the path name down to get rid of the "app/" bit:
         root, ext = os.path.splitext(filePath)
-        newPath = root[4:] + ".js"
+        # replace app with javascripts
+        newPath = 'javascripts' + root[3:] + ".js"
 
         self.__logger.debug('mapping %s -> %s', filePath, newPath)
 
