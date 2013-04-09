@@ -35,5 +35,5 @@ require.config({
     jqueryjstree: {
         deps: ['jquery', 'jqueryhotkeys', 'jquerycookies']}
   },
-  deps: ["javascripts/app"]
+  deps: ["main"]
 });
