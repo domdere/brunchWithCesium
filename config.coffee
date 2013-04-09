@@ -9,6 +9,7 @@ exports.config =
         'javascripts/vendor/jQuery.js': /^vendor[\\/]scripts[\\/]jquery/
         'javascripts/vendor/underscore.js': /^vendor[\\/]scripts[\\/]underscore/
         'javascripts/vendor/backbone.js': /^vendor[\\/]scripts[\\/]backbone/
+        'javascripts/vendor/chaplin.js': /^vendor[\\/]scripts[\\/]chaplin/
         'javascripts/vendor/bootstrap.js': /^vendor[\\/]scripts[\\/]bootstrap/
         'test/javascripts/test.js': /^test[\\/](?!vendor)/
         'test/javascripts/test-vendor.js': /^test[\\/](?=vendor)/
