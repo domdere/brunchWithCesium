@@ -2,6 +2,7 @@
 *.diff
 *.err
 *.orig
+*.pyc
 *.log
 *.rej
 *.swo
