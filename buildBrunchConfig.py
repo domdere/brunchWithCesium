@@ -65,11 +65,11 @@ class ConfigFileBuilder:
 \n\
   modules:\n\
     wrapper: (path, data) ->\n\
-        cleanPath = path.replace(new RegExp('\\\\', 'g'), '/').replace(/^app\//, '')\n\
+        cleanPath = path.replace(new RegExp('\\\\\\\\', 'g'), '/').replace(/^app\\//, '')\n\
         \"\"\"\n\
 define('#{cleanPath}', function(require, exports, module) {\n\
-  #{data.replace /(\\)?\n(?!\n)/g, ($0, $1) ->\n\
-    if $1 then $0 else '\n  '}\n\
+  #{data.replace /(\\\\)?\\n(?!\\n)/g, ($0, $1) ->\n\
+    if $1 then $0 else '\\n  '}\n\
 });\n\
 \"\"\"\n\
     definition: 'amd'\n\
