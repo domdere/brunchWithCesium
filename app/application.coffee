@@ -8,7 +8,7 @@ module.exports = class Application extends Chaplin.Application
   # “Controller title – Site title” (see Chaplin.Layout#adjustTitle)
   title: 'Brunch example application'
 
-  initialize: ->
+  start: ->
     super
 
     # Initialize core components.
