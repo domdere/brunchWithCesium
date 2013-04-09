@@ -4,7 +4,12 @@ exports.config =
     javascripts:
       joinTo:
         'javascripts/app.js': /^app/
-        'javascripts/vendor.js': /^vendor/
+        'javascripts/vendor/require-text.js': /^vendor[\\/]scripts[\\/]require-text/
+        'javascripts/vendor/console-polyfill.js': /^vendor[\\/]scripts[\\/]console-polyfill/
+        'javascripts/vendor/jQuery.js': /^vendor[\\/]scripts[\\/]jquery/
+        'javascripts/vendor/underscore.js': /^vendor[\\/]scripts[\\/]underscore/
+        'javascripts/vendor/backbone.js': /^vendor[\\/]scripts[\\/]backbone/
+        'javascripts/vendor/bootstrap.js': /^vendor[\\/]scripts[\\/]bootstrap/
         'test/javascripts/test.js': /^test[\\/](?!vendor)/
         'test/javascripts/test-vendor.js': /^test[\\/](?=vendor)/
       order:
