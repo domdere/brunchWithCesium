@@ -1,7 +1,9 @@
 require([
-    'javascripts/app'
-], function (App) {
+    'javascripts/application'
+], function (Application) {
 
-    App.initialize();
+    var app = new Application();
+
+    app.initialize();
 
 });
