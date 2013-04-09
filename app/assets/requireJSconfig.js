@@ -24,5 +24,5 @@ require.config({
       deps: ['jquery']
     }
   },
-  deps: ["main"]
+  deps: ["javascripts/app"]
 });
