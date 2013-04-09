@@ -6,7 +6,8 @@ exports.config =
         'javascripts/app.js': /^app/
         'javascripts/vendor/require-text.js': /^vendor[\\/]scripts[\\/]require-text/
         'javascripts/vendor/console-polyfill.js': /^vendor[\\/]scripts[\\/]console-polyfill/
-        'javascripts/vendor/jQuery.js': /^vendor[\\/]scripts[\\/]jquery/
+        'javascripts/vendor/jQuery.js': /^vendor[\\/]scripts[\\/]jquery-[^u]/
+        'javascripts/vendor/jQuery-ui.js': /^vendor[\\/]scripts[\\/]jquery-ui/
         'javascripts/vendor/underscore.js': /^vendor[\\/]scripts[\\/]underscore/
         'javascripts/vendor/backbone.js': /^vendor[\\/]scripts[\\/]backbone/
         'javascripts/vendor/chaplin.js': /^vendor[\\/]scripts[\\/]chaplin/
