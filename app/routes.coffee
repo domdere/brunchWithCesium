@@ -1,2 +1,3 @@
-module.exports = (match) ->
-  match '', 'home#index', name: 'home'
+define [] () ->
+    return (match) ->
+        match '', 'home#index', name: 'home'

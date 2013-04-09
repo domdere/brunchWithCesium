@@ -1,1 +1,2 @@
-module.exports = require('chaplin').mediator
+define ['chaplin'] (chaplin) ->
+    return chaplin.mediator
