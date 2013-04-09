@@ -6,6 +6,9 @@ Uses RequireJS/AMD instead of CommonJS and has some Libraries that I like to use
 
 ## Additional Libraries
 * jQuery-ui
+* jQuery-jsTree
+* jQuery-hotkeys
+* jQuery-cookies
 * Twitter Bootstrap
 
 ## Usage

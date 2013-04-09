@@ -1,4 +1,3 @@
-RequireJS = require 'require'
 Chaplin = require 'chaplin'
 mediator = require 'mediator'
 routes = require 'routes'
