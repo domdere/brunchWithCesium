@@ -2,6 +2,6 @@ require([
     'javascripts/app'
 ], function (App) {
 
-    App.start();
+    App.initialize();
 
 });
