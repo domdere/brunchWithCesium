@@ -7,7 +7,7 @@ require.config({
     jqueryjstree: 'javascripts/vendor/jQuery-jsTree',
     underscore: 'javascripts/vendor/underscore',
     backbone: 'javascripts/vendor/backbone',
-    backbone: 'javascripts/vendor/chaplin',
+    chaplin: 'javascripts/vendor/chaplin',
     text: 'javascripts/vendor/require-text',
     bootstrap: 'javascripts/vendor/bootstrap',
     templates: '../templates',
@@ -19,6 +19,9 @@ require.config({
     backbone: {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
+    },
+    chaplin: {
+      deps: ['backbone']
     },
     bootstrap: {
       deps: ['jquery']
