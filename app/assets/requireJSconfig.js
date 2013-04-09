@@ -1,12 +1,13 @@
 require.config({
   paths: {
-    jquery: 'inc/js/jQuery/1.9.1/jquery',
-    jqueryui: '../inc/js/jQuery-ui/1.10.2/jquery-ui.custom',
-    underscore: '../inc/js/underscore/1.4.2/underscore',
-    backbone: '../inc/js/backbone/0.9.10/backbone-min',
-    text: '../inc/js/require-text/2.0.5/text',
+    jquery: 'javascripts/jQuery',
+    jqueryui: 'javascripts/jQuery-ui',
+    underscore: 'javascripts/underscore',
+    backbone: 'javascripts/backbone',
+    backbone: 'javascripts/chaplin',
+    text: 'javascripts/require-text',
+    bootstrap: 'javascripts/bootstrap',
     templates: '../templates',
-    bootstrap: '../inc/js/bootstrap/2.3.1/bootstrap',
   },
   shim: {
     underscore: {
@@ -21,9 +22,6 @@ require.config({
     },
     jqueryui: {
       deps: ['jquery']
-    },
-    galleriffic: {
-        deps: ['jquery']
     }
   },
   deps: ["main"]
