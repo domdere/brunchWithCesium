@@ -8,6 +8,9 @@ exports.config =
         'javascripts/vendor/console-polyfill.js': /^vendor[\\/]scripts[\\/]console-polyfill/
         'javascripts/vendor/jQuery.js': /^vendor[\\/]scripts[\\/]jquery-[^u]/
         'javascripts/vendor/jQuery-ui.js': /^vendor[\\/]scripts[\\/]jquery-ui/
+        'javascripts/vendor/jQuery-Cookie.js': /^vendor[\\/]scripts[\\/]jquery.cookie/
+        'javascripts/vendor/jQuery-hotkeys.js': /^vendor[\\/]scripts[\\/]jquery.hotkeys/
+        'javascripts/vendor/jQuery-jsTree.js': /^vendor[\\/]scripts[\\/]jquery.jstree/
         'javascripts/vendor/underscore.js': /^vendor[\\/]scripts[\\/]underscore/
         'javascripts/vendor/backbone.js': /^vendor[\\/]scripts[\\/]backbone/
         'javascripts/vendor/chaplin.js': /^vendor[\\/]scripts[\\/]chaplin/
