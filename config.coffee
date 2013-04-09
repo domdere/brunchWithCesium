@@ -41,6 +41,12 @@ exports.config =
       joinTo: 'javascripts/app.js'
 
   modules:
-    wrapper: 'amd'
+    wrapper: (path, data) ->
+        """
+define(['require', 'exports', 'module'], function(require, exports, module) {
+  #{data.replace /(\\)?\n(?!\n)/g, ($0, $1) ->
+    if $1 then $0 else '\n  '}
+});
+"""
     definition: 'amd'
     addSourceURLs: true
