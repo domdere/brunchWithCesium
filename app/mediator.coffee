@@ -1,2 +1,2 @@
-define ['chaplin'], (chaplin) ->
-    return chaplin.mediator
+define ['chaplin'], (Chaplin) ->
+    return Chaplin.mediator

@@ -1,12 +1,11 @@
-Chaplin = require 'chaplin'
+define ['chaplin'], (Chaplin) ->
+    # Application-specific utilities
+    # ------------------------------
 
-# Application-specific utilities
-# ------------------------------
+    # Delegate to Chaplin’s utils module
+    utils = Chaplin.utils.beget Chaplin.utils
 
-# Delegate to Chaplin’s utils module
-utils = Chaplin.utils.beget Chaplin.utils
+    # _(utils).extend
+    #  someMethod: ->
 
-# _(utils).extend
-#  someMethod: ->
-
-module.exports = utils
+    return utils

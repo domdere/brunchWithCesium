@@ -1,9 +1,9 @@
-Chaplin = require 'chaplin'
-SiteView = require 'views/site-view'
-HeaderView = require 'views/header-view'
+define ['chaplin', 'views/site-view', 'views/header-view'], (Chaplin, SiteView, HeaderView) ->
 
-module.exports = class Controller extends Chaplin.Controller
-  beforeAction:
-    '.*': ->
-      @compose 'site', SiteView
-      @compose 'header', HeaderView
+    class Controller extends Chaplin.Controller
+        beforeAction:
+            '.*': ->
+                @compose 'site', SiteView
+                @compose 'header', HeaderView
+
+    return Controller

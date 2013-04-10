@@ -1,7 +1,8 @@
-Chaplin = require 'chaplin'
-require 'lib/view-helper' # Just load the view helpers, no return value
+define ['chaplin', 'lib/view-helper'], (Chaplin) ->
 
-module.exports = class View extends Chaplin.View
-  # Precompiled templates function initializer.
-  getTemplateFunction: ->
-    @template
+    class View extends Chaplin.View
+        # Precompiled templates function initializer.
+        getTemplateFunction: ->
+            @template
+
+    return View

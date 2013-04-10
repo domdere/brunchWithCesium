@@ -1,6 +1,7 @@
-Controller = require 'controllers/base/controller'
-HomePageView = require 'views/home-page-view'
+define ['controllers/base/controller', 'views/home-page-view'], (Controller, HomePageView) ->
 
-module.exports = class HomeController extends Controller
-  index: ->
-    @view = new HomePageView region: 'main'
+    class HomeController extends Controller
+        index: ->
+            @view = new HomePageView region: 'main'
+
+    return HomeController

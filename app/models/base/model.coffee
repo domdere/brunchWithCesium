@@ -1,5 +1,7 @@
-Chaplin = require 'chaplin'
+define ['chaplin'], (Chaplin) ->
 
-module.exports = class Model extends Chaplin.Model
-  # Mixin a synchronization state machine
-  # _(@prototype).extend Chaplin.SyncMachine
+    class Model extends Chaplin.Model
+        # Mixin a synchronization state machine
+        # _(@prototype).extend Chaplin.SyncMachine
+
+    return Model

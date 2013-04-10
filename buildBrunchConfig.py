@@ -123,6 +123,9 @@ class ConfigFileBuilder:
                 config.write(vendors.read())
 
             config.write(self.__configChunk2)
+
+        self.__logger.info('Config File Complete...')
+
         return
         
 

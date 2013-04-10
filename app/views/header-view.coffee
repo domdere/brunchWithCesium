@@ -1,9 +1,9 @@
-View = require 'views/base/view'
-template = require 'views/templates/header'
+define ['views/base/view', 'views/templates/header'], (View, template) ->
+    class HeaderView extends View
+        autoRender: yes
+        className: 'header'
+        region: 'header'
+        id: 'header'
+        template: template
 
-module.exports = class HeaderView extends View
-  autoRender: yes
-  className: 'header'
-  region: 'header'
-  id: 'header'
-  template: template
+    return HeaderView
