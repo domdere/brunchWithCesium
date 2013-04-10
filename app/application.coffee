@@ -32,6 +32,9 @@ define ['chaplin', 'javascripts/mediator', 'javascripts/routes'], (Chaplin, medi
             # @initRouter routes, pushState: false, root: '/subdir/'
             @initRouter routes
 
+            # Start routing...
+            @startRouting()
+
             # Freeze the application instance to prevent further changes.
             Object.freeze? this
 
