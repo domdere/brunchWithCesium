@@ -113,18 +113,27 @@ class ConfigFileBuilder:
         self.__logger.info('final mappings: %s', self.__mappings)
 
         self.__logger.info('Opening config.coffee...')
-        with open('config.coffee', 'w') as config:
-            self.__logger.info('Writing to config.coffee...')
-            config.write(self.__configChunk1)
 
-            self.__writeMappings(config)
+        try:
+            with open('config.coffee', 'w') as config:
+                self.__logger.info('Writing to config.coffee...')
+                config.write(self.__configChunk1)
 
-            with open('vendorMappings.cfg', 'r') as vendors:
-                config.write(vendors.read())
+                self.__writeMappings(config)
+                
+                try:
+                    with open('vendorMappings.cfg', 'r') as vendors:
+                        config.write(vendors.read())
+                except IOError as fileError:
+                    self.__logger.critical('Could not open vendorMappings.cfg for reading, config file incomplete.. (Error: %s)', fileError)
+                    return
 
-            config.write(self.__configChunk2)
+                config.write(self.__configChunk2)
 
-        self.__logger.info('Config File Complete...')
+            self.__logger.info('Config File Complete...')
+
+        except IOError as fileError:
+            self.__logger.critical('Could not open config.coffee for writing, Error: %s', fileError)
 
         return
         
