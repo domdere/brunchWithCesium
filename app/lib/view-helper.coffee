@@ -1,4 +1,4 @@
-define ['mediator'], (mediator) ->
+define ['javascripts/mediator'], (mediator) ->
     # Application-specific view helpers
     # http://handlebarsjs.com/#helpers
     # --------------------------------

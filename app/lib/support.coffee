@@ -1,4 +1,4 @@
-define ['chaplin', 'lib/utils'], (Chaplin, utils) ->
+define ['chaplin', 'javascripts/lib/utils'], (Chaplin, utils) ->
     # Application-specific feature detection
     # --------------------------------------
 

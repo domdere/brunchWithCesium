@@ -1,4 +1,4 @@
-define ['views/templates/home', 'views/base/view'], (template, View) ->
+define ['javascripts/views/templates/home', 'javascripts/views/base/view'], (template, View) ->
     class HomePageView extends View
         autoRender: yes
         className: 'home-page'
