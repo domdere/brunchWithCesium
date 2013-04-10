@@ -1,16 +1,17 @@
 require.config({
   paths: {
-    jquery: 'javascripts/vendor/jQuery',
-    jqueryui: 'javascripts/vendor/jQuery-ui',
-    jquerycookies: 'javascripts/vendor/jQuery-Cookies',
-    jqueryhotkeys: 'javascripts/vendor/jQuery-hotkeys',
-    jqueryjstree: 'javascripts/vendor/jQuery-jsTree',
-    underscore: 'javascripts/vendor/underscore',
-    backbone: 'javascripts/vendor/backbone',
-    chaplin: 'javascripts/vendor/chaplin',
-    text: 'javascripts/vendor/require-text',
-    bootstrap: 'javascripts/vendor/bootstrap',
-    templates: '../templates',
+    jquery: 'vendor/jQuery',
+    jqueryui: 'vendor/jQuery-ui',
+    jquerycookies: 'vendor/jQuery-Cookies',
+    jqueryhotkeys: 'vendor/jQuery-hotkeys',
+    jqueryjstree: 'vendor/jQuery-jsTree',
+    underscore: 'vendor/underscore',
+    backbone: 'vendor/backbone',
+    handlebars: 'vendor/handlebars',
+    chaplin: 'vendor/chaplin',
+    text: 'vendor/require-text',
+    bootstrap: 'vendor/bootstrap',
+    templates: '../../templates',
   },
   shim: {
     underscore: {
@@ -19,6 +20,9 @@ require.config({
     backbone: {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
+    },
+    handlebars: {
+      exports: 'Handlebars'
     },
     chaplin: {
       deps: ['backbone']

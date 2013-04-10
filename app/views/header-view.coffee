@@ -1,4 +1,4 @@
-define ['javascripts/views/base/view', 'javascripts/views/templates/header'], (View, template) ->
+define ['views/base/view', 'text!views/templates/header.hbs'], (View, template) ->
     class HeaderView extends View
         autoRender: yes
         className: 'header'

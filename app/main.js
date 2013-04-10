@@ -1,5 +1,5 @@
 require([
-    'javascripts/application'
+    'application'
 ], function (Application) {
 
     var app = new Application();

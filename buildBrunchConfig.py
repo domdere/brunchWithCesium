@@ -31,7 +31,9 @@ class ConfigFileBuilder:
     def __init__(self):
         self.__mappings = []
 
-        self.__directoryExclusions = ['assets', 'templates', 'styles']
+        self.__directoryExclusions = ['assets']
+
+        self.__extensionExclusions = ['.html', '.hbs', '.css', '.js']
 
         self.__logger = logging.getLogger(__name__)
 
@@ -91,7 +93,11 @@ class ConfigFileBuilder:
     def __addFileMapping(self, filePath):
         root, ext = os.path.splitext(filePath)
         # replace app with javascripts
-        newPath = 'javascripts' + root[3:] + ".js"
+
+        if ext not in self.__extensionExclusions:
+            ext = '.js'
+
+        newPath = 'javascripts' + root[3:] + ext
 
         self.__logger.debug('mapping %s -> %s', filePath, newPath)
 

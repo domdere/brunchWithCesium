@@ -1,4 +1,4 @@
-require ['javascripts/application'], (Application) ->
+require ['application'], (Application) ->
     # Initialize the application on DOM ready event.
     $ ->
         app = new Application()

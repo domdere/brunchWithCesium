@@ -1,4 +1,4 @@
-define ['chaplin', 'javascripts/views/site-view', 'javascripts/views/header-view'], (Chaplin, SiteView, HeaderView) ->
+define ['chaplin', 'views/site-view', 'views/header-view'], (Chaplin, SiteView, HeaderView) ->
 
     class Controller extends Chaplin.Controller
         beforeAction:

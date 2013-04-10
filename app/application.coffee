@@ -1,4 +1,4 @@
-define ['chaplin', 'javascripts/mediator', 'javascripts/routes'], (Chaplin, mediator, routes) ->
+define ['chaplin', 'mediator', 'routes'], (Chaplin, mediator, routes) ->
 
     # The application object.
     class Application extends Chaplin.Application
