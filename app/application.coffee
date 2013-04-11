@@ -1,4 +1,4 @@
-define ['chaplin', 'mediator', 'routes', 'controllers/sidebar-controller'], (Chaplin, mediator, routes, SidebarController) ->
+define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'controllers/sidebar-controller'], (Chaplin, mediator, routes, HeaderController, SidebarController) ->
 
     # The application object.
     class Application extends Chaplin.Application
@@ -52,6 +52,7 @@ define ['chaplin', 'mediator', 'routes', 'controllers/sidebar-controller'], (Cha
 
         # There are some controllers that are just always on and arent connected to any routes.
         initControllers: () ->
+            new HeaderController()
             new SidebarController()
             return
 

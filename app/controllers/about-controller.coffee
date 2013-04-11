@@ -2,6 +2,6 @@ define ['controllers/base/controller', 'views/about-page-view'], (Controller, Ab
     
     class AboutController extends Controller
         show: () ->
-            @view = new AboutPageView region: 'main'
+            @view = new AboutPageView()
 
     return AboutController

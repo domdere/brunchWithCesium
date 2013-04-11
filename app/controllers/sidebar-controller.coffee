@@ -7,5 +7,7 @@ define ['controllers/base/controller', 'models/item-collection', 'views/sidebar-
             @collection.fetch
                 error: (collection, xhr, options) ->
                     console.error xhr
+            
+            return
 
     return SidebarController

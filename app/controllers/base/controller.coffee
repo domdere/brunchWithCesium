@@ -1,9 +1,5 @@
-define ['chaplin', 'views/site-view', 'views/header-view'], (Chaplin, SiteView, HeaderView) ->
+define ['chaplin'], (Chaplin) ->
 
     class Controller extends Chaplin.Controller
-        beforeAction:
-            '.*': ->
-                @compose 'site', SiteView
-                @compose 'header', HeaderView
 
     return Controller
