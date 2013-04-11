@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">A Sidebar!</li>
+                    <li class="active"><a href="/">Items</a></li>
+                    {{#each items}}
+                        <li><a href="/item/{{id}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

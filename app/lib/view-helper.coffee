@@ -1,4 +1,4 @@
-define ['mediator', 'handlebars'], (mediator) ->
+define ['jquery', 'mediator', 'handlebars'], ($, mediator) ->
     # Application-specific view helpers
     # http://handlebarsjs.com/#helpers
     # --------------------------------
@@ -28,4 +28,32 @@ define ['mediator', 'handlebars'], (mediator) ->
             url = if result then "/#{result}" else routeName
         url
 
-    return
+    # ------------------
+    # Nav Button Helpers
+    # ------------------
+
+    # Got this from stackoverflow:
+    # http://stackoverflow.com/questions/11533542/twitter-bootstrap-add-active-class-to-li
+    # i couldnt get the 'data-toggle' solution to work at all :(
+    stripTrailingSlash = (str) ->
+        if str.substr -1 == '/'
+            return str.substr 0, str.length -1
+
+        return str
+
+    bugle = 1
+
+    onNavClick = () ->
+        url = window.location.pathname
+        activePage = stripTrailingSlash url
+
+        $ '.nav li a'.each () ->
+            thisDom = $ this
+            thisDom.removeClass 'active'
+
+            currentPage = stripTrailingSlash $ thisDom.attr 'href'
+                
+            if activePage == currentPage
+                thisDom.parent.addClass 'active'
+
+    return {onNavClick : onNavClick, bugle: bugle}

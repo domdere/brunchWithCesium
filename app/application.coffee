@@ -1,4 +1,4 @@
-define ['chaplin', 'mediator', 'routes'], (Chaplin, mediator, routes) ->
+define ['chaplin', 'mediator', 'routes', 'controllers/sidebar-controller'], (Chaplin, mediator, routes, SidebarController) ->
 
     # The application object.
     class Application extends Chaplin.Application
@@ -35,15 +35,24 @@ define ['chaplin', 'mediator', 'routes'], (Chaplin, mediator, routes) ->
             # Start routing...
             @startRouting()
 
+            # There are some controllers that are just always on and arent connected to any routes.
+            @initControllers()
+
             # Freeze the application instance to prevent further changes.
             Object.freeze? this
 
         # Create additional mediator properties.
-        initMediator: ->
+        initMediator: () ->
             # Add additional application-specific properties and methods
             # e.g. mediator.prop = null
 
             # Seal the mediator.
             mediator.seal()
+            return
+
+        # There are some controllers that are just always on and arent connected to any routes.
+        initControllers: () ->
+            new SidebarController()
+            return
 
     return Application
