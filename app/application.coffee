@@ -30,7 +30,7 @@ define ['chaplin', 'mediator', 'routes'], (Chaplin, mediator, routes) ->
             # the root per default. You might change that in the options
             # if necessary:
             # @initRouter routes, pushState: false, root: '/subdir/'
-            @initRouter routes
+            @initRouter routes, pushState: true
 
             # Start routing...
             @startRouting()
