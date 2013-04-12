@@ -1,4 +1,4 @@
-define ['views/base/view', 'text!views/templates/sidebar.hbs'], (View, template) ->
+define ['bootstrap', 'views/base/view', 'text!views/templates/sidebar.hbs'], (Bootstrap, View, template) ->
     
     class SidebarView extends View
         template: template
