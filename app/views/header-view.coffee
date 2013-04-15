@@ -6,7 +6,9 @@ define ['jquery', 'bootstrap', 'views/base/view', 'text!views/templates/header.h
 
         render: () ->
             super
-            #($ '.dropdown-toggle').dropdown()
+            # need to run it this way because this.$el has not been added to the DOM yet.
+            # otherwise if it were i could run "($ '.dropdown-toggle').dropdown()"
+            ((this.$el).find '.dropdown-toggle').dropdown()
             return
 
     return HeaderView
