@@ -43,6 +43,8 @@ define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'contr
             # Freeze the application instance to prevent further changes.
             Object.freeze? this
 
+            return
+
         # Create additional mediator properties.
         initMediator: () ->
             # Add additional application-specific properties and methods
