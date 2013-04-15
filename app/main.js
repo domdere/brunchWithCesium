@@ -4,6 +4,6 @@ require([
 
     var app = new Application();
 
-    app.initialize();
+    app.initialize()
 
 });

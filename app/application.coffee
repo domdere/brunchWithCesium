@@ -1,4 +1,4 @@
-define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'controllers/sidebar-controller'], (Chaplin, mediator, routes, HeaderController, SidebarController) ->
+define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'controllers/sidebar-controller', 'cesiumScene/cesiumScene'], (Chaplin, mediator, routes, HeaderController, SidebarController, CesiumScene) ->
 
     # The application object.
     class Application extends Chaplin.Application
@@ -32,6 +32,8 @@ define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'contr
             # @initRouter routes, pushState: false, root: '/subdir/'
             @initRouter routes, pushState: true
 
+            @initCesiumScene()
+
             # Start routing...
             @startRouting()
 
@@ -54,6 +56,10 @@ define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'contr
         initControllers: () ->
             new HeaderController()
             new SidebarController()
+            return
+
+        initCesiumScene: () ->
+            @cesiumScene = new CesiumScene()
             return
 
     return Application

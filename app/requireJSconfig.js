@@ -11,7 +11,7 @@ require.config({
     chaplin: 'vendor/chaplin',
     text: 'vendor/require-text',
     bootstrap: 'vendor/bootstrap',
-    cesium: 'javascript/cesium/Cesium',
+    cesium: 'cesium/Cesium',
     templates: '../../templates',
   },
   shim: {
