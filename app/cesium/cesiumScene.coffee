@@ -1,4 +1,4 @@
-define ['jquery', 'cesium', 'mediator'], ($, Cesium, mediator) ->
+define ['jquery', 'agicesium', 'mediator'], ($, Cesium, mediator) ->
 
     class CesiumScene
         constructor: () ->
@@ -45,7 +45,15 @@ define ['jquery', 'cesium', 'mediator'], ($, Cesium, mediator) ->
 
             @scene.getCamera().frustum.near = 1.0
 
+            cameraOrientation = @getDefaultCameraOrientation()
+
+            @scene.getCamera().controller.lookAt cameraOrientation.e, cameraOrientation.e.add(cameraOrientation.v), cameraOrientation.u
+
+            @transitioner = new Cesium.SceneTransitioner @scene, @ellipsoid
+
             @tick()
+
+            window.addEventListener('resize', @onResize, false)
 
             return
 
@@ -56,6 +64,27 @@ define ['jquery', 'cesium', 'mediator'], ($, Cesium, mediator) ->
             @scene.initializeFrame()
             @scene.render(new Cesium.JulianDate())
             Cesium.requestAnimationFrame(@tick)
+
+            return
+
+        getDefaultCameraOrientation: () ->
+            e = new Cesium.Cartesian3 -5992851.119607907, 5673763.566986167, -4934288.41246672
+            v = new Cesium.Cartesian3 0.5694784363814059, -0.5484879719002332, 0.6122542406364869
+            u = new Cesium.Cartesian3 -0.4834355192950482, 0.3789231470579431, 0.7891180819800918
+
+            return {e: e, v: v, u: u}
+
+        onResize: () =>
+            console.log 'CesiumScene#onResize'
+            width = @canvas.clientWidth
+            height = @canvas.clientHeight
+            
+            if @canvas.width == width and @canvas.height == height
+                return
+
+            @canvas.width = width
+            @canvas.height = height
+            @scene.getCamera().frustum.aspectRatio = width / height
 
             return
             

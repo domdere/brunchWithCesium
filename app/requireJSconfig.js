@@ -11,7 +11,7 @@ require.config({
     chaplin: 'vendor/chaplin',
     text: 'vendor/require-text',
     bootstrap: 'vendor/bootstrap',
-    cesium: 'cesium/Cesium',
+    agicesium: 'cesium/Cesium',
     templates: '../../templates',
   },
   shim: {
@@ -43,7 +43,7 @@ require.config({
     jqueryjstree: {
         deps: ['jquery', 'jqueryhotkeys', 'jquerycookies']
     },
-    cesium: {
+    agicesium: {
         exports: 'Cesium'
     }
   },

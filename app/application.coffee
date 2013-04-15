@@ -1,4 +1,4 @@
-define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'controllers/sidebar-controller', 'cesiumScene/cesiumScene'], (Chaplin, mediator, routes, HeaderController, SidebarController, CesiumScene) ->
+define ['chaplin', 'mediator', 'routes', 'controllers/header-controller', 'controllers/sidebar-controller', 'cesium/cesiumScene'], (Chaplin, mediator, routes, HeaderController, SidebarController, CesiumScene) ->
 
     # The application object.
     class Application extends Chaplin.Application
